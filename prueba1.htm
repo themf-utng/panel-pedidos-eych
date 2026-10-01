@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Pedidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-100">
+    <header class="bg-white border-b border-stone-200">
+        <nav class="mx-auto flex max-w-5xl items-center justify-between p-4">
+            <span class="text-lg font-semibold">Sopa de alga</span>
+            <ul class="hidden gap-6 text-sm sm:flex">
+                <li><a href="#" class="hover:text-orange-600">Pedidos</a></li>
+                <li><a href="#" class="hover:text-orange-600">Clientes</a></li>
+                <li><a href="#" class="hover:text-orange-600">Catalogos</a></li>
+            </ul>
+            <button class="rounded-lg bg-stone-800 px-4 py-2 text-sm text-white hover:bg-stone-600">
+                Nuevo pedido
+            </button>
+        </nav>
+    </header>
+    <main class="mx-auto max-w-5xl space-y-8 p-4 py-8">
+        <h1 class="text-2xl font-bold">Pedidos de la semana</h1>
+
+        <!-- Indicadores: 1 columna para movil, 3 para pantallas grandes -->
+         <section class="grid gap-4 sm:grid-cols-3"> 
+            <article class="rounded-xl border border-stone-200 bg-white p-5">
+                <p class="text-sm text-stone-500">En produccion</p>
+                <p class="mt-1 text-3xl font-bold text-red-500">12</p>
+            </article>
+            <article class="rounded-xl border border-stone-200 bg-white p-5">
+                <p class="text-sm text-stone-500">Por entregar</p>
+                <p class="mt-1 text-3xl font-bold text-blue-500">12</p>
+            </article>
+            <article class="rounded-xl border border-stone-200 bg-white p-5">
+                <p class="text-sm text-stone-500">Entregados</p>
+                <p class="mt-1 text-3xl font-bold text-green-500">12</p>
+            </article>
+         
+         </section>
+
+         <!-- Tabla -->
+        <section class="overflow-x-auto rounded-xl border border-stone-200 bg-white">
+            <table class="w-full text-left text-sm>
+                <thead class="border-b border-stone-200 text-stone-500">
+                    <tr>
+                        <th class="p-4 font-medium">Folio</th>
+                        <th class="p-4 font-medium">Cliente</th>
+                        <th class="p-4 font-medium">Etapa</th>
+                        <th class="p-4 font-medium">Entrega</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-200">
+                    <tr class="hover:bg-stone-50">
+                        <td class="p-4 font-medium">#001</td>
+                        <td class="p-4">Juan Perez</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-blue-800">Esmaltado</span>
+                        </td>
+                        <td class="p-4">12/06/2024</td>
+                    </tr>
+                    <tr class="hover:bg-stone-50">
+                        <td class="p-4 font-medium">#002</td>
+                        <td class="p-4">María García</td>
+                        <td class="p-4"><span class="rounded-full bg-red-100 px-3 py-1 text-red-800">Empaque</span></td>
+                        <td class="p-4">13/06/2024</td>
+                    </tr>
+                    <tr class="hover:bg-stone-50">
+                        <td class="p-4 font-medium">#003</td>
+                        <td class="p-4">Carlos López</td>
+                        <td class="p-4"><span class="rounded-full bg-pink-100 px-3 py-1 text-pink-800">Modelado</span></td>
+                        <td class="p-4">14/06/2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulario -->
+        <section class="ronded-xl border border-stone-200 bg-white p-6">
+            <h2 class="text-xl font-semibold">Registrar pedido</h2>
+            <form class="mt-4 grid gap-4 sm:grid-cols-2">
+                <div>  
+                    <label for="cliente" class="block text-sm text-stone-600">Cliente</label>
+                    <input type="text" id="cliente" 
+                    class="mt-1 w-full rounded-lg border border-stone-300 p-2 focus:border-orange-500 focus:outline-none">
+                </div>
+                <div>  
+                    <label for="piezas" class="block text-sm text-stone-600">Piezas</label>
+                    <input type="number" id="piezas" min="1" value="1" 
+                    class="mt-1 w-full rounded-lg border border-stone-300 p-2 focus:border-orange-500 focus:outline-none">
+                </div>
+                <div class="sm:col-span-2 sm:text-right text-center">  
+                    <button class="rounded-lg bg-orange-500 px-5 py-2 text-sm text-white hover:bg-orange-600">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </section>
+</body>
+</html>
